@@ -48,5 +48,8 @@ public class Ejercicio5 {
 		
 		//Muestro la nota media como se muestra en el boletín y como se usa en el expediente
 		System.out.println("La nota media como se muestra en el boletín es " + notaBoletin + " y como se usa en el expediente es " + notaExpediente);
+		
+		//Cierro Scanner
+		sc.close();
 	}
 }
