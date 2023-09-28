@@ -5,22 +5,40 @@ import java.util.Scanner;
 public class Ejercicio1 {
 
 	public static void main(String[] args) {
-		//Declaro la variable kilos como int ya que es entera y beneficios como float porque puede ser decimal
-		int kilos;
+		//Constante donde guardar el precio por kilo de manzana
+		final float PRECIO_MANZANA = 2.35f;
+		
+		//Constante donde guardar el precio por kilo de pera
+		final float PRECIO_PERA = 1.95f;
+		
+		//Variable donde guardar los kilos de manzana
+		float kilosManzana;
+		
+		//Variable donde guardar los kilos de pera
+		float kilosPera;
+		
+		//Variable donde guardo los beneficiso
 		float beneficios;
 		
-		//Creo un scanner
+		//Scanner para leer del teclado
 		Scanner sc = new Scanner (System.in);
 		
-		//Pregunto por los kilos vendidos y calculo el beneficio
+		//Pregunto por los kilos de manzanas vendidos
 		System.out.println("¿Cuántos kilos de manzanas se han vendido?");
-		kilos = sc.nextInt();
-		beneficios = (float)(kilos*2.35);
-		System.out.println("¿Cuántos kilos de peras se han vendido?");
-		kilos = sc.nextInt();
-		beneficios = (float)(beneficios+kilos*1.95);
 		
-		//Doy el resultado
+		//Leo los kilos de manzanas vendidos del teclado
+		kilosManzana = sc.nextFloat();
+		
+		//Pregunto por los kilos de peras vendidos
+		System.out.println("¿Cuántos kilos de peras se han vendido?");
+		
+		//Leo los kilos de peras vendidos del teclado
+		kilosPera = sc.nextFloat();
+		
+		//Calculo los beneficios totales
+		beneficios = kilosManzana*PRECIO_MANZANA + kilosPera*PRECIO_PERA;
+		
+		//Mostramos los beneficios
 		System.out.println("El beneficio anual es de " + beneficios + "€");
 		
 		//Cierro el escáner
